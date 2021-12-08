@@ -1,0 +1,36 @@
+.fondo {
+    background-color: #ffefef;
+}
+
+.fondoBarra{
+    background-color: rgb(138, 1, 1);
+}
+
+#contorno{
+    border: black 3px solid;
+}
+
+#bord{
+    border: black 1px solid;
+}
+
+#cabecera{
+    border: black 1px solid;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#cuerpo{
+    background-color: rgb(201, 201, 201);
+}
+
+label{
+    font-weight: bold;
+}
+
+#cabeza{
+    border: black 3px solid;
+    background-image: linear-gradient(to right, #000dbe 0%, #75b5ff 100%);
+}
