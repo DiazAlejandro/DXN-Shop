@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fondoBarra">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="img/logo.webp" alt="" width="50" height="40">
@@ -76,32 +76,67 @@
     <section class="fondo">
         <!--Agregar aqui su contenido-->
         <div class="container">
-            <h1>Contenido</h1>
-            <br>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
+            <section id="perfil_usuario" class="container w-100">
+                <p class="h1 pt-4">Mis datos</p>
+                <div class="row justify-content-center">
+                    <div class="card text-white bg-dark mb-3" style="max-width: 55rem;">
+                        <div class="card-header">
+                            <h3>Información Personal</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">¿Qué conocemos de ti?</h5>
+                            <!---<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Nombre:</li>
+                                        <li class="list-group-item">Apellidos:</li>
+                                        <li class="list-group-item">Telefono:</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Alejandro</li>
+                                        <li class="list-group-item">Díaz Ruiz</li>
+                                        <li class="list-group-item">951 178 9781</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 55rem;">
+                        <div class="card-header">
+                            <h3>Datos de la cuenta</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mantenemos seguros tus datos</h5>
+                            <!---<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Correo Electrónico:</li>
+                                        <li class="list-group-item">Usuario Predeterminado:</li>
+                                        <li class="list-group-item">Contraseña:</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">alejandro_diaz1253@hotmail.com</li>
+                                        <li class="list-group-item">ALEJANDRODRA001</li>
+                                        <li class="list-group-item"><a href="">Cambiar tu contraseña</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
         </div>
-    
+    </section>
+
+
     <footer>
-        <div class="card text-center fondoBarra">
+        <div class="card text-center bg-dark">
             <div class="card-header text-light">
                 Acerca de nosotros
             </div>
@@ -115,7 +150,7 @@
             </div>
         </div>
     </footer>
-</section>
+    </section>
 </body>
 
 </html>

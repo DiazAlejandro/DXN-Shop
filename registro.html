@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fondoBarra">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="img/logo.webp" alt="" width="50" height="40">
@@ -76,46 +76,65 @@
     <section class="fondo">
         <!--Agregar aqui su contenido-->
         <div class="container">
-            <h1>Contenido</h1>
-            <br>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
+            <section id="HistorialDevoluciones" class="container w-100">
+                <p class="h1 pt-4">Registro - Nuevo usuario</p>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre(s)</label>
+                                <input type="text" class="form-control" id="nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Apellidos(s)</label>
+                                <input type="text" class="form-control" id="apellidos">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">No. Telefónico</label>
+                                <input type="text" class="form-control" id="telefono">
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo_e"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Al seleccionar esta casilla, aceptas los terminos y condiciones por usar esta plataforma.</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+            </section>
         </div>
-    
-    <footer>
-        <div class="card text-center fondoBarra">
-            <div class="card-header text-light">
-                Acerca de nosotros
+
+        <footer>
+            <div class="card text-center bg-dark">
+                <div class="card-header text-light">
+                    Acerca de nosotros
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-light">DXN</h5>
+                    <p class="card-text text-light">Página Diseñada Por [Inserte Nombre del equipo]</p>
+                    <img src="img/logo.webp" alt="" width="100" height="70">
+                </div>
+                <div class="card-footer text-muted">
+                    Copyright 2021 &copy
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title text-light">DXN</h5>
-                <p class="card-text text-light">Página Diseñada Por [Inserte Nombre del equipo]</p>
-                <img src="img/logo.webp" alt="" width="100" height="70">
-            </div>
-            <div class="card-footer text-muted">
-                Copyright 2021 &copy
-            </div>
-        </div>
-    </footer>
-</section>
+        </footer>
+    </section>
 </body>
 
 </html>

@@ -16,10 +16,17 @@
         crossorigin="anonymous"></script>
     <title>Plantilla de la página web</title>
     <link rel="stylesheet" href="css/pag.css">
+
+    <style>
+        .posicion {
+            bottom: 5em;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fondoBarra">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="img/logo.webp" alt="" width="50" height="40">
@@ -73,35 +80,31 @@
             </div>
         </div>
     </nav>
-    <section class="fondo">
-        <!--Agregar aqui su contenido-->
-        <div class="container">
-            <h1>Contenido</h1>
-            <br>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-            <h3>Subcontenido</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque cupiditate aut iure
-                repellat cum aliquam ex laudantium blanditiis voluptas, praesentium doloremque neque dicta
-                repudiandae, odio ab unde explicabo perferendis?</p>
-        </div>
-    
+
+    <div class="container-fluid bg-success rounded-bottom" style="height: 10em;"></div>
+    <div class="container-fluid pb-5 bg-gradient" style="background-color: #e7d28c;">
+
+        <section id="HistorialDevoluciones" class="container w-100">
+
+            <div class="card bg-dark text-white position-relative posicion">
+
+                <h5 class="card-header border-bottom border-success border-5 text-center">Compra realizada con éxito</h5>
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="row justify-content-center align-items-center text-center">
+                            <img src="img/check.png" style="height: 50px; width: 75px;">
+                            <p class="mt-5">En breve recibiras en tu correo la información de tu envío.</p>
+                            <a href="#" class="btn btn-light w-50 mt-5">Seguir comprando</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
     <footer>
-        <div class="card text-center fondoBarra">
+        <div class="card text-center bg-dark">
             <div class="card-header text-light">
                 Acerca de nosotros
             </div>
@@ -115,7 +118,7 @@
             </div>
         </div>
     </footer>
-</section>
+
 </body>
 
 </html>
