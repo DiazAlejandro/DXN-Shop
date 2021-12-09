@@ -14,33 +14,66 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     
+    <script >
+        function iniciar(){
+            campo1=document.getElementById("email");
+            campo2=document.getElementById("password");
+            campo1.addEventListener("input",validacion1);
+            campo2.addEventListener("input",validacion2);
+            document.getElementById("enviar").addEventListener("click", enviar, false);
+        }
+
+       
+        function validacion1(){
+            if(campo1.value == ''){
+                campo1.style.background = '#FFDDDD';
+            }else{
+                campo1.style.background = '#D7F1FA';
+            }
+        }
+        function validacion2(){
+          if(campo2.value == ''){
+                campo2.style.background = '#FFDDDD';
+            }else{
+                campo2.style.background = '#D7F1FA';
+            }
+        }
+        function enviar() {
+            var valido = document.informacion.checkValidity();
+            if (valido) {
+                document.informacion.submit();
+            }
+        }
+        
+        window.addEventListener("load", iniciar, false);
+    </script>
 </head>
 
 <body>
-    <div class="login-container">
+    <div class="login-container justify-content-center">
         <div class="login-info-container">
             <h1 class="title">Ingresar</h1>
-            <form class="inputs-container">
+            <form name="form" action="#" method="get" class="inputs-container justify-content-center">
                 <div class="form-group "id="correo">
                     <br>
                     <i class="fa fa-user icono"></i> Ingrese su correo electrónico
-                    <input type="email" name="email" id="email" class="form-control Input"
-                        placeholder="Correo Electrónico"><br><br>
+                    <input pattern="[a-zA-Z0-9_.-@]+" type="email" name="email" id="email" class="form-control Input"
+                        placeholder="Correo Electrónico" required><br><br>
                 </div>
                 <div class="form-group mx-sm-6" id="contraseña">
                     <i class="fa fa-lock icono"></i> Ingrese su contraseña
-                    <input type="password" name="pass" id="password" class="form-control Input"
-                        placeholder="Contraseña"><br><br>
+                    <input pattern="[a-zA-Z0-9_.-]{5,}" type="password" name="pass" id="password" class="form-control Input"
+                        placeholder="Contraseña" minlength="5" maxlength="15" required><br><br>
                 </div>
                 <div class="form-group mx-sm-5">
-                    <button type="submit" class="btn btn-blue btn-lg  ingresar "><i
+                    <button type="submit" class="btn btn-blue btn-lg  ingresar" id="enviar" ><i
                             class="fas fa-sign-in-alt"></i>  Ingresar</button>
                 </div>
                 <div>
                     <a class="reset" href="#" id="lin">Olvidé mi contraseña</a>
                 </div>
                 <div>
-                    <a class="reg" href="#" id="lin">Regresar</a>
+                    <a class="reg" href="index.html" id="lin">Regresar</a>
                 </div>
             </form>
         </div>
@@ -48,6 +81,7 @@
             <img src="img/logo.webp" alt="">
         </div>
     </div>
+
 </body>
 
 </html>

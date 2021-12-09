@@ -14,9 +14,61 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
+    <script >
+        function iniciar(){
+            campo1=document.getElementById("nombre");
+            campo2=document.getElementById("descripcion");
+            campo3=document.getElementById("cantidades");
+            campo4=document.getElementById("precio");
+            campo5=document.getElementById("existencia");
+            campo1.addEventListener("input",validacion1);
+            campo2.addEventListener("input",validacion1);
+            campo3.addEventListener("input",validacion1);
+            campo4.addEventListener("input",validacion1);
+            campo5.addEventListener("input",validacion1);
+            document.getElementById("enviar").addEventListener("click", enviar, false);
+        }
+
+       
+        function validacion1(){
+            if(campo1.value == ''){
+                campo1.style.background = '#FFDDDD';
+            }else{
+                campo1.style.background = '#D7F1FA';
+            }
+        if(campo2.value == ''){
+                campo2.style.background = '#FFDDDD';
+            }else{
+                campo2.style.background = '#D7F1FA';
+            }
+         if(campo3.value == ''){
+                campo3.style.background = '#FFDDDD';
+            }else{
+                campo3.style.background = '#D7F1FA';
+            }
+        if(campo4.value == ''){
+                campo4.style.background = '#FFDDDD';
+            }else{
+                campo4.style.background = '#D7F1FA';
+            }
+         if(campo5.value == ''){
+                campo5.style.background = '#FFDDDD';
+            }else{
+                campo5.style.background = '#D7F1FA';
+            }
+        }
+        function enviar() {
+            var valido = document.informacion.checkValidity();
+            if (valido) {
+                document.informacion.submit();
+            }
+        }
+        
+        window.addEventListener("load", iniciar, false);
+    </script>
 </head>
 
-<body>
+<body class="fondo">
     <nav class="navbar navbar-expand-lg navbar-dark fondoBarra">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -83,7 +135,7 @@
                         </div>
                         <div class="card-body" id="cuerpo">
 
-                            <form action="#" method="post">
+                            <form name="form" action="#" method="get">
                                 <div class="row">
                                     <div class="form-group  col-md-12 col-lg-6 d-none d-xs-none d-sm-none d-md-none d-lg-block ">
                                         <label>Seleccione imágenes: <span class="text-danger" id="imagen">*</span></label>
@@ -94,24 +146,24 @@
                                     <div class="form-group col-md-12 col-lg-6">
                                         <label for="txtclave">Nombre:<span class="text-danger"
                                                 id="marca">*</span></label>
-                                        <input type="text" name="nombre" class="form-control" id="bord"
-                                            placeholder="Ingrese el nombre del producto">
+                                        <input pattern="[a-zA-Z0-9_.-áéíóúÁÉÍÓÚ]+" type="text" name="nombre" class="form-control bord" id="nombre"
+                                            placeholder="Ingrese el nombre del producto" required>
 
                                         <label>Descripción: <span class="text-danger" id="marca">*</span></label>
-                                        <textarea name="descripcion" class="form-control" id="bord"
+                                        <textarea pattern="[a-zA-Z0-9,.áéíóúÁÉÍÓÚ]+" name="descripcion" class="form-control bord" id="descripcion"
                                             placeholder="Ingrese la descripción del producto" required></textarea>
 
                                         <label>Cantidades: <span class="text-danger" id="marca">*</span></label>
-                                        <input type="text" name="cantidades" class="form-control" id="bord"
-                                            placeholder="Ingrese la porción o cantidades">
+                                        <input pattern="[a-zA-Z0-9,.áéíóúÁÉÍÓÚ]+" type="text" name="cantidades" class="form-control bord" id="cantidades"
+                                            placeholder="Ingrese la porción o cantidades" required>
 
                                         <label>Precio:<span class="text-danger" id="marca">*</span></label>
-                                        <input type="text" name="precio" class="form-control" id="bord"
-                                            placeholder="Ingrese el precio del producto">
+                                        <input pattern="[0-9,.]+" type="text" name="precio" class="form-control bord" id="precio"
+                                            placeholder="Ingrese el precio del producto" required>
 
                                         <label>Existencia:<span class="text-danger" id="marca">*</span></label>
-                                        <input type="text" name="existencia" class="form-control" id="bord"
-                                            placeholder="Ingrese la existencia del producto">
+                                        <input pattern="[0-9]+" type="text" name="existencia" class="form-control bord" id="existencia"
+                                            placeholder="Ingrese la existencia del producto" required>
                                     </div>
                                     <div class="form-group col-md-6 d-lg-none d-xl-none ">
                                         <label>Seleccione imágenes: <span class="text-danger" id="imagen">*</span></label>
@@ -119,11 +171,11 @@
                                         <input type="file" multiple (change)="detectFiles($event)">
                                     </div>
                                 </div>
-                                <button type="submit" name="accion" value="enviar" id="reg"
-                                    class="btn btn-success font-weight-bold">Registrar <icon class="fas fa-check">
+                                <button type="submit"class="btn btn-success font-weight-bold" id="enviar">Registrar 
+                                    <icon class="fas fa-check">
                                     </icon></button>
 
-                                <a class="btn btn-danger font-weight-bold" id="btn" href="tabla_instructor.php">Cancelar
+                                <a class="btn btn-danger font-weight-bold" id="btn" href="listaProductos.html">Cancelar
                                     <icon class="fas fa-times"></icon></a>
 
                             </form>

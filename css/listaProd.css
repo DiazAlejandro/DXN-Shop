@@ -34,3 +34,15 @@ label{
     border: black 3px solid;
     background-image: linear-gradient(to right, #000dbe 0%, #75b5ff 100%);
 }
+
+#iconoB{
+    align-items: center;
+    border: black 1px solid;
+    margin-top: 5px;
+}
+
+#iconoB2{
+    align-items: center;
+    border: black 1px solid;
+    margin: 2px;
+}
