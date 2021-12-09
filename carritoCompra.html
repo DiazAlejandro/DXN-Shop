@@ -17,6 +17,46 @@
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="css/pag.css">
+    <script>
+        
+        function iniciar(){
+            document.getElementById("cantidad").value = 1;
+            document.getElementById("cantidad1").value = 1;
+        }
+        /**
+        function aumentar(){
+            var valor = document.getElementById("cantidad").value;
+            console.log(valor);
+            valor =+ 2;
+            console.log(valor);
+        }
+        */
+        function incrementar() {
+            valor = document.getElementById("cantidad");
+            if (valor.value == 1 || valor.value > 1)
+                valor.value ++;
+        }
+
+        function decrementar() {
+            valor = document.getElementById("cantidad");
+                if (valor.value > 1)
+                valor.value --;
+        }
+
+        function incrementar1() {
+            valor = document.getElementById("cantidad1");
+            if (valor.value == 1 || valor.value > 1)
+                valor.value ++;
+        }
+
+        function decrementar1() {
+            valor = document.getElementById("cantidad1");
+                if (valor.value > 1)
+                valor.value --;
+        }
+        window.addEventListener("load", iniciar, false);
+        
+    </script>
 </head>
 
 <body>
@@ -86,13 +126,15 @@
                     <h4 class="card-title ">Carrito (3)</h4>
                     <div class="row p-4 align-items-center">
 
-                        <div class="col col-xl-2"></div>
-                        <div class="col col-xl-1 text-center">
+                        <div class="col-xl-1">
+
+                        </div>
+                        <div class="col col-xl-1 col-3 text-center">
                             <img src="img/imageni1.jpg" height="80px" width="70px">
                         </div>
 
 
-                        <div class="col col-xl-4 ">
+                        <div class="col col-xl-4 col-sm-6">
                             <p class="fw-bold text-black">Nombre del producto 1</p>
                             <p>Descripción: </p>
                             <p>Esta es una breve descripción del producto, favor de ingresar la descripción desde el
@@ -100,21 +142,18 @@
                         </div>
 
 
-                        <div class="col col-xl-2 text-center">
+                        <div class="col col-xl-2 col-8 text-center">
                             <div class="row p-2 text-center">
                                 <div class="col col-xl-3 text-center">
-                                    <button type="button" class="btn btn-outline-success">+</button>
+                                    <button type="button" class="btn btn-outline-success" id="decCant" onclick="decrementar()">-</button>
                                 </div>
                                 <div class="col col-xl-6 text-center">
                                     <input type="text" class="form-control" id="cantidad" maxlength="3"
-                                        pattern="[0-9]+">
-                                    <script>
-                                        var cant = document.getElementById('cantidad');
-                                        cant.value = 1;
-                                    </script>
+                                        pattern="[0-9]+" style="text-align: center;" required>
+                                        
                                 </div>
                                 <div class="col col-xl-3 text-center">
-                                    <button type="button" class="btn btn-outline-success">+</button>
+                                    <button type="button" class="btn btn-outline-success" id="incCant" onclick="incrementar()">+</button>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
@@ -145,23 +184,87 @@
                             </div>
                         </div>
 
-                        <div class="col col-xl-2 text-center">
+                        <div class="col col-xl-2 col-4 text-center">
                             <h4>$000.00 USD</h4>
                         </div>
-                    
+                    </div>
+
+                    <!--******************************************************************************-->
+                    <div class="row p-4 align-items-center">
+
+                        <div class="col-xl-1">
 
                         </div>
+                        <div class="col col-xl-1 col-3 text-center">
+                            <img src="img/imageni1.jpg" height="80px" width="70px">
+                        </div>
+
+
+                        <div class="col col-xl-4 col-sm-6">
+                            <p class="fw-bold text-black">Nombre del producto 1</p>
+                            <p>Descripción: </p>
+                            <p>Esta es una breve descripción del producto, favor de ingresar la descripción desde el
+                                formulario para alta de los productos</p>
+                        </div>
+
+
+                        <div class="col col-xl-2 col-8 text-center">
+                            <div class="row p-2 text-center">
+                                <div class="col col-xl-3 text-center">
+                                    <button type="button" class="btn btn-outline-success" id="decCant" onclick="decrementar1()">-</button>
+                                </div>
+                                <div class="col col-xl-6 text-center">
+                                    <input type="text" class="form-control" id="cantidad1" maxlength="3"
+                                        pattern="[0-9]+" style="text-align: center;" required>
+                                        
+                                </div>
+                                <div class="col col-xl-3 text-center">
+                                    <button type="button" class="btn btn-outline-success" id="incCant" onclick="incrementar1()">+</button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#BorrarProducto">
+                                <i class="fa fa-trash"></i>
+                            </button>
+
+                            <!-- Modal Borrar Producto -->
+                            <div class="modal fade" id="BorrarProducto" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Desea borrar este producto?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Este producto ya no estará en tu carrito de compras, pero puedes seguir comprando más cosas</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn fondoBarra text-light">Borrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-xl-2 col-4 text-center">
+                            <h4>$000.00 USD</h4>
+                        </div>
+                    </div>
 
                         <div class="row p-4 align-items-center">
-                            <div class="col col-xl-4"></div>
-                            <div class="col col-xl-6">
+                            <div class="col col-xl-4 col-1"></div>
+                            <div class="col col-xl-6 col-9 align-content-center">
                                 <H3>Total con envío: $000.00 USD</H3>
                             </div>
-                            <div class="col col-xl-2">
+                            <div class="col col-xl-2 col-2">
                                 <button type="button" class="btn fondoBarra text-light">Pagar</button>
                             </div>
-                            
                         </div>
+
                     </div>
                 </div>
 
