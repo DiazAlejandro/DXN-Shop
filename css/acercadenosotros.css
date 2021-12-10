@@ -20,7 +20,8 @@ h1,h2{
 
     
     .nacc{
-        background: #6e0909;
+        background:dark;
+        color: black;
         
     }
    
@@ -30,10 +31,12 @@ h1,h2{
         float: none; /* Added */
         margin-bottom: 10px; /* Added */
         box-shadow: 5px 5px 5px 5px rgba(63, 63, 62, 0.87);
-        background: #b9b6ab;
+        background: #ffffff;
       }
       .list-group-item:hover {
-        background-color:#fd9999;    
+        background-color:#888383;  
+        color: white;  
+        
       }
 
       img.pequeña{
@@ -59,3 +62,10 @@ h1,h2{
    }
 
    
+
+   .card-img-top{
+    width: 250px;
+    height: 250px;
+    display:block;
+    margin:auto;
+   }
