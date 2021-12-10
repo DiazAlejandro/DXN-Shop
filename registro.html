@@ -16,6 +16,35 @@
         crossorigin="anonymous"></script>
     <title>Registro</title>
     <link rel="stylesheet" href="css/pag.css">
+    <script>
+        function iniciar() {
+            document.formulario_reg.addEventListener("invalid", validacion, true);
+            document.getElementById("reg").addEventListener("click", enviar, false);
+            document.formulario_reg.addEventListener("input", controlar, false);
+        }
+
+        function validacion(e) {
+            var elemento = e.target; //Referencia al objeto que ha  generado el evento
+            elemento.style.background = '#FFDDDD';
+        }
+
+        function enviar() {
+            var valido = document.formulario_reg.checkValidity();
+            if (valido) {
+                document.formulario_reg.submit();
+            }
+        }
+
+        function controlar(e) {
+            var elemento = e.target;
+            if (elemento.validity.valid) {
+                elemento.style.background = '#FFFFFF';
+            } else {
+                elemento.style.background = '#DDDDDD';
+            }
+        }
+        window.addEventListener("load", iniciar, false);
+    </script>
 </head>
 
 <body>
@@ -66,10 +95,7 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acerca de Nosotros</a>
                     </li>
                 </ul>
-                <form class="d-flex mx-auto">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+
             </div>
         </div>
     </nav>
@@ -78,43 +104,58 @@
         <div class="container">
             <section id="HistorialDevoluciones" class="container w-100">
                 <p class="h1 pt-4">Registro - Nuevo usuario</p>
-                <form>
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="mb-3">
-                                <label class="form-label">Nombre(s)</label>
-                                <input type="text" class="form-control" id="nombre">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Apellidos(s)</label>
-                                <input type="text" class="form-control" id="apellidos">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">No. Telefónico</label>
-                                <input type="text" class="form-control" id="telefono">
-                            </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="card text-white bg-dark mb-3" style="max-width: 55rem;">
+                        <div class="card-header border-bottom border-light">
+                            <h3>Registra tus datos en este apartado</h3>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="card-body">
+                            <form name="formulario_reg">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre(s)</label>
+                                            <input type="text" class="form-control" id="nombre" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Apellidos(s)</label>
+                                            <input type="text" class="form-control" id="apellidos" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">No. Telefónico</label>
+                                            <input type="text" class="form-control" id="telefono" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1">
 
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="correo_e"
-                                    aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Al seleccionar esta casilla, aceptas los terminos y condiciones por usar esta plataforma.</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Correo
+                                                Electrónico</label>
+                                            <input type="email" class="form-control" id="correo_e"
+                                                aria-describedby="emailHelp" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                required>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Al seleccionar esta
+                                                casilla, aceptas los terminos y condiciones por usar esta
+                                                plataforma.</label>
+                                        </div>
+                                        <button type="submit" id="reg" class="btn btn-primary">Registrarse</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
+
                 <br>
             </section>
         </div>
