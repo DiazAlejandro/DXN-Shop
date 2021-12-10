@@ -64,75 +64,64 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acerca de Nosotros</a>
                     </li>
                 </ul>
-                <form class="d-flex mx-auto">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
 
-    <section>
-        <div class="container ">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <br><br><br>
-                    <div class="card " id="contorno">
-                        <div class="card-header" id="cabeza">
-                            <h1 class="font-weight-bold text-center mb-3">VENTAS</h1>
-                        </div>
-                        <div class="card-body" id="cuerpo">
-                            <div class="d-flex mx-auto">
-                                <input class="form-control col-4"  type="search" placeholder="Búsqueda" aria-label="Search">
-                                <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                            </div>
-                            <br>
-                            <div class="row">
-                                 <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">ID</div>
-                                <div class="col-12 col-sm-12 col-lg-3 col-xl-3 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Cliente</div>
-                                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Artículo</div>
-                                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2  d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Fecha</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Hora</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Precio U</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Cantidad</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Total</div>
+    <section class="container col-lg-11">
+        <br>
+        <div class="card bg-dark text-white">
+            <h5 class="card-header border-bottom border-white">VENTAS</h5>
 
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1 " id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">ID: </p> 1
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " id="bord">
-                                    <p class="d-lg-none d-xl-none " id="cabecera">Cliente: </p>Mariana Rodriguez
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Artículo: </p> CAFÉ NEGRO LINGZHI
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Fecha: </p> 10/12/2021
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Hora: </p> 09:34:27
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Precio Unitario: </p> 270.0
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Cantidad: </p> 2
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Total: </p>540.0
-                                </div>
-                                
-                            </div>
-                        </div>
+            <div class="card-body">
+                <div class="d-flex mx-auto">
+                    <input class="form-control col-4" type="search" placeholder="Búsqueda" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                </div>
+                <br>
+                <div class="row" id="centrado">
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block "
+                        id="cabecera">ID</div>
+                    <div class="col-12 col-sm-12 col-lg-3 col-xl-3 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Cliente</div>
+                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Artículo</div>
+                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2  d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Fecha</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Hora</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Precio U</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Cantidad</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Total</div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1 " id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">ID: </p> 1
                     </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " id="bord">
+                        <p class="d-lg-none d-xl-none " id="cabecera">Cliente: </p>Mariana Rodriguez
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Artículo: </p> CAFÉ NEGRO LINGZHI
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Fecha: </p> 10/12/2021
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Hora: </p> 09:34:27
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Precio Unitario: </p> 270.0
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Cantidad: </p> 2
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Total: </p>540.0
+                    </div>
+
                 </div>
             </div>
         </div>

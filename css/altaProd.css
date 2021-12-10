@@ -6,13 +6,7 @@
     background-color: rgb(138, 1, 1);
 }
 
-#contorno{
-    border: black 3px solid;
-}
 
-.bord{
-    border: black 1px solid;
-}
 
 #cuerpo{
     background-color: rgb(201, 201, 201);
@@ -23,6 +17,6 @@ label{
 }
 
 #cabeza{
-    border: black 3px solid;
+   
     background-image: linear-gradient(to right, #000dbe 0%, #75b5ff 100%);
 }

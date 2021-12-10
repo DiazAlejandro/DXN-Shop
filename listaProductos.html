@@ -72,66 +72,63 @@
         </div>
     </nav>
 
-    <section>
-        <div class="container ">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <br><br><br>
-                    <div class="card " id="contorno">
-                        <div class="card-header" id="cabeza">
-                            <h1 class="font-weight-bold text-center mb-3">LISTA DE PRODUCTOS</h1>
-                        </div>
-                        <div class="card-body" id="cuerpo">
-                            <div class="d-flex mx-auto">
-                                <input class="form-control col-4"  type="search" placeholder="Búsqueda" aria-label="Search">
-                                <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                            </div>
-                            <br>
-                            <a class="btn btn-success" href="altaProductos.html" >Nuevo producto  <icon class="fas fa-plus"></icon></a>
-                            <br><br>
-                            <div class="row" id="centrado">
-                                 <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Producto</div>
-                                <div class="col-12 col-sm-12 col-lg-3 col-xl-3 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Descripción</div>
-                                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Cantidades</div>
-                                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2  d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Precio</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Exist.</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Editar</div>
-                                <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block bord"
-                                    id="cabecera">Eliminar</div>
-                          
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Producto: </p> CAFÉ NEGRO LINGZHI
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " id="bord">
-                                    <p class="d-lg-none d-xl-none " id="cabecera">Descripción: </p> Café Negro Lingzhi DXN no tiene azúcar o aditivos, pero logra mantener un fuerte sabor y rico aroma del café. Está perfectamente diseñado para la Sociedad moderna.
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Cantidades: </p> 20 sobres x 4.5g
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Precio: </p> 270.0
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Existencia: </p> 8
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1 " id="bord" >
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Editar: </p>
-                                    <button type="button" class="btn btn-warning" id="iconoB"><i
-                                            class="fas fa-edit"></i></button>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
-                                    <p class="d-lg-none d-xl-none" id="cabecera">Eliminar: </p>
-                                    <button type="button" class="btn btn-danger" id="iconoB"><i
-                                            class="fas fa-trash-alt"></i></button>
-                                </div>
-                            </div>
-                        </div>
+    <section class="container w-100">
+        <br>
+        <div class="card bg-dark text-white">
+            <h5 class="card-header border-bottom border-white">LISTA DE PRODUCTOS</h5>
+            <div class="card-body ">
+                <div class="d-flex mx-auto">
+                    <input class="form-control col-4" type="search" placeholder="Búsqueda" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                </div>
+                <br>
+                <a class="btn btn-success" href="altaProductos.html">Nuevo producto <icon class="fas fa-plus">
+                    </icon>
+                </a>
+                <br><br>
+                <div class="row" id="centrado">
+                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block "
+                        id="cabecera">Producto</div>
+                    <div class="col-12 col-sm-12 col-lg-3 col-xl-3 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Descripción</div>
+                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Cantidades</div>
+                    <div class="col-12 col-sm-12 col-lg-2 col-xl-2  d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Precio</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Exist.</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Editar</div>
+                    <div class="col-12 col-sm-12 col-lg-1 col-xl-1 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                        id="cabecera">Eliminar</div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Producto: </p> CAFÉ NEGRO LINGZHI
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " id="bord">
+                        <p class="d-lg-none d-xl-none " id="cabecera">Descripción: </p> Café Negro Lingzhi DXN no
+                        tiene
+                        azúcar o aditivos, pero logra mantener un fuerte sabor y rico aroma del café. Está
+                        perfectamente
+                        diseñado para la Sociedad moderna.
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 " id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Cantidades: </p> 20 sobres x 4.5g
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Precio: </p> 270.0
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Existencia: </p> 8
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1 " id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Editar: </p>
+                        <button type="button" class="btn btn-warning" id="iconoB"><i class="fas fa-edit"></i></button>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-1 col-xl-1" id="bord">
+                        <p class="d-lg-none d-xl-none" id="cabecera">Eliminar: </p>
+                        <button type="button" class="btn btn-danger" id="iconoB"><i
+                                class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
             </div>
