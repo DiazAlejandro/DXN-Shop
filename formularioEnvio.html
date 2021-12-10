@@ -15,11 +15,11 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <title>Formulario de envio</title>
-    <link rel="stylesheet" href="css/estiloformularioEnvio.css">
+    <link rel="stylesheet" href="css/estiloproductos.css">
 
     <script>
         function iniciar() {
-           
+
             document.informacion.addEventListener("invalid", validacion, true);
             document.informacion.addEventListener("invalid", validar, true);
             document.getElementById("enviar").addEventListener("click", enviar, false);
@@ -36,28 +36,28 @@
                 document.informacion.submit();
             }
         }
-        function controlar(e){
-            var elemento=e.target;
-            if(elemento.validity.valid){
-                elemento.style.background='#FFFFFF';
-            }else{
-                elemento.style.background='#FFDDDD';
+        function controlar(e) {
+            var elemento = e.target;
+            if (elemento.validity.valid) {
+                elemento.style.background = '#FFFFFF';
+            } else {
+                elemento.style.background = '#FFDDDD';
             }
         }
 
-    function validar() {
-        if (document.informacion.nombreSelect.
-            value == 0 ||
-            document.nombreFormulario.nombreSelect.
-                value == "") {
-            alert("Selecciona Una opción");
-            document.nombreFormulario.nombreSelect.
-                focus();
+        function validar() {
+            if (document.informacion.nombreSelect.
+                value == 0 ||
+                document.nombreFormulario.nombreSelect.
+                    value == "") {
+                alert("Selecciona Una opción");
+                document.nombreFormulario.nombreSelect.
+                    focus();
+            }
         }
-    }
 
         window.addEventListener("load", iniciar, false);
-    </script> 
+    </script>
 </head>
 
 <body>
@@ -108,10 +108,7 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acerca de Nosotros</a>
                     </li>
                 </ul>
-                <form class="d-flex mx-auto">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+            
             </div>
         </div>
     </nav>
@@ -120,105 +117,140 @@
         <section id="ventas" class="w-75 m-auto">
             <form name="informacion" method="get">
                 <div class="container">
-                    <h1>FORMULARIO DE ENVIO</h1>
-                    <div class="linea"></div>
-                    <br>
+                    <div class="abs-center">
 
-                    <div class="col-5">                                             
-                    <div class="input-group input-group-sm mb-3 ">
-                        <span class="input-group-text" id="inputGroup-sizing-sm">NUM.PEDIDO</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" >
-                      </div>
-                    </div>
-                    
+                        <div class="card bg-dark  mt-4 text-white ">
+                            <h1 class="card-header border-bottom border-white ">FORMULARIO DE ENVIO</h1>
 
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">CLIENTE</label>                       
-                        <input pattern="[A-Za-z]{3,}" type="text" id="usuario" maxlength="10" class="form-control"  required>
+                            <div class="row justify-content-center  ">
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 ">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">CLIENTE</label>
+                                        <input pattern="[A-Za-z]{3,}" type="text" id="usuario" maxlength="10"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-md">
+                                        <label for="disabledSelect" class="form-label">CIUDAD:</label>
+                                        <select class="form-select" id="nombreSelect" required="required">
 
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">CIUDAD:</label>
-                        <select class="form-select" id="nombreSelect"   required="required">   
-                            
-                            <option value="" selected="selected">- selecciona -</option>                         
-                            <option value="1">MEXICO</option>
-                            <option value="2">OAXACA</option>
-                            <option value="3">VERACRUZ</option>
-                        </select>
-                    </div>
+                                            <option value="" selected="selected">- selecciona -</option>
+                                            <option value="1">MEXICO</option>
+                                            <option value="2">OAXACA</option>
+                                            <option value="3">VERACRUZ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">DIRECCION:</label>
-                        <input pattern="[A-Za-z]{3,}" type="text" id="direccion" maxlength="10" class="form-control"  required>
-                       
-                    </div>
-                    <div class="row g-2">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">CALLE:</label>
-                            <input pattern="[A-Za-z]{3,}" type="text" id="calle" maxlength="10" class="form-control"  required>
-                         
+                            <div class="row justify-content-center">
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">DIRECCION:</label>
+                                        <input pattern="[A-Za-z]{3,}" type="text" id="direccion" maxlength="10"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">COLONIA:</label>
+                                        <input pattern="[A-Za-z]{3,}" type="text" id="colonia" maxlength="10"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">CALLE:</label>
+                                            <input pattern="[A-Za-z]{3,}" type="text" id="calle" maxlength="10"
+                                                class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">NUMERO:</label>
+                                            <input pattern="[0-9]+" type="text" id="numero" maxlength="10"
+                                                class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">CP:</label>
+                                            <input pattern="[0-9]+" type="text" id="cp" min="5" maxlength="5"
+                                                class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <label for="exampleInputEmail1" class="form-label">TELEFONO</label>
+                                            <input pattern="[0-9]+" type="text" id="telefono" maxlength="10"
+                                                class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <label for="exampleFormControlTextarea1"
+                                                class="form-label">REFERENCIAS:</label>
+                                            <textarea class="form-control" id="REFERENCIAS" rows="3"></textarea>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="w-33">
+                                <div class="text-center ">
+
+                                    <button type="button" id="enviar" class="btn btn-success">ENVIAR</button>
+
+                                </div>
+                                <br>
+                            </div>
                         </div>
-
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">NUMERO:</label>
-                            <input pattern="[0-9]+" type="text" id="numero" maxlength="10" class="form-control"  required>
-                         
-                        </div>
                     </div>
-
-                    <div class="row g-2">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">CP:</label>
-                            <input pattern="[0-9]+" type="text" id="cp" maxlength="10" class="form-control"  required>
-
-                        </div>
-
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">COLONIA:</label>
-                            <input pattern="[A-Za-z]{3,}" type="text" id="colonia" maxlength="10" class="form-control"  required>
-
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">TELEFONO</label>
-                        <input pattern="[0-9]+" type="text" id="telefono" maxlength="10" class="form-control"  required>
-
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">REFERENCIAS:</label>
-                        <textarea class="form-control" id="REFERENCIAS" rows="3"></textarea>
-
-                    </div>
-
-
-                    <div class="w-33">
-                        <div class="text-center ">
-                            <button type="button" id="enviar" class="button">ENVIAR</button>
-
-                        </div>
-                        <br>
-                    </div>
+                </div>
             </form>
             </div>
         </section>
-            <footer>
-                <div class="card text-center fondoBarra">
-                    <div class="card-header text-light">
-                        Acerca de nosotros
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-light">DXN</h5>
-                        <p class="card-text text-light">Página Diseñada Por [Inserte Nombre del equipo]</p>
-                        <img src="img/logo.webp" alt="" width="100" height="70">
-                    </div>
-                    <div class="card-footer text-muted">
-                        Copyright 2021 &copy
-                    </div>
+        <br>
+        <footer>
+            <div class="card text-center fondoBarra">
+                <div class="card-header text-light">
+                    Acerca de nosotros
                 </div>
-            </footer>
-        </section>
+                <div class="card-body">
+                    <h5 class="card-title text-light">DXN</h5>
+                    <p class="card-text text-light">Página Diseñada Por [Inserte Nombre del equipo]</p>
+                    <img src="img/logo.webp" alt="" width="100" height="70">
+                </div>
+                <div class="card-footer text-muted">
+                    Copyright 2021 &copy
+                </div>
+            </div>
+        </footer>
+    </section>
 </body>
 
 </html>
