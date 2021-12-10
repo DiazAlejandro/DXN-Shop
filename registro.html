@@ -16,6 +16,35 @@
         crossorigin="anonymous"></script>
     <title>Registro</title>
     <link rel="stylesheet" href="css/pag.css">
+    <script>
+        function iniciar() {
+            document.formulario_reg.addEventListener("invalid", validacion, true);
+            document.getElementById("reg").addEventListener("click", enviar, false);
+            document.formulario_reg.addEventListener("input", controlar, false);
+        }
+
+        function validacion(e) {
+            var elemento = e.target; //Referencia al objeto que ha  generado el evento
+            elemento.style.background = '#FFDDDD';
+        }
+
+        function enviar() {
+            var valido = document.formulario_reg.checkValidity();
+            if (valido) {
+                document.formulario_reg.submit();
+            }
+        }
+
+        function controlar(e) {
+            var elemento = e.target;
+            if (elemento.validity.valid) {
+                elemento.style.background = '#FFFFFF';
+            } else {
+                elemento.style.background = '#DDDDDD';
+            }
+        }
+        window.addEventListener("load", iniciar, false);
+    </script>
 </head>
 
 <body>
@@ -66,7 +95,7 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acerca de Nosotros</a>
                     </li>
                 </ul>
-                 
+
             </div>
         </div>
     </nav>
@@ -82,47 +111,51 @@
                             <h3>Registra tus datos en este apartado</h3>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form name="formulario_reg">
                                 <div class="row">
                                     <div class="col-lg-5">
                                         <div class="mb-3">
                                             <label class="form-label">Nombre(s)</label>
-                                            <input type="text" class="form-control" id="nombre">
+                                            <input type="text" class="form-control" id="nombre" required>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Apellidos(s)</label>
-                                            <input type="text" class="form-control" id="apellidos">
+                                            <input type="text" class="form-control" id="apellidos" required>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">No. Telefónico</label>
-                                            <input type="text" class="form-control" id="telefono">
+                                            <input type="text" class="form-control" id="telefono" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-1">
-            
+
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                                            <label for="exampleInputEmail1" class="form-label">Correo
+                                                Electrónico</label>
                                             <input type="email" class="form-control" id="correo_e"
-                                                aria-describedby="emailHelp">
+                                                aria-describedby="emailHelp" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                required>
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Al seleccionar esta casilla, aceptas los terminos y condiciones por usar esta plataforma.</label>
+                                            <label class="form-check-label" for="exampleCheck1">Al seleccionar esta
+                                                casilla, aceptas los terminos y condiciones por usar esta
+                                                plataforma.</label>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                                        <button type="submit" id="reg" class="btn btn-primary">Registrarse</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                
+
                 <br>
             </section>
         </div>
