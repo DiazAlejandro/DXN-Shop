@@ -4,3 +4,8 @@
 .fondoBarra{
     background-color: rgb(138, 1, 1);
 }
+
+.fondoButton{
+    background-color: #c2c2c2;
+    color: #000000;
+}
