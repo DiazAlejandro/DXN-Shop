@@ -108,7 +108,7 @@
     <section class="container w-100">
         <br>
         <div class="card bg-dark text-white">
-            <h5 class="card-header border-bottom border-white">NUEVO PRODUCTO</h5>
+            <h2 class="card-header border-bottom border-white">Nuevo producto</h2>
 
             <div class="card-body">
 
@@ -132,15 +132,15 @@
 
                             <label>Cantidades: <span class="text-danger" id="marca">*</span></label>
                             <input pattern="[a-zA-Z0-9,.áéíóúÁÉÍÓÚ]+" type="text" name="cantidades"
-                                class="form-control bord" id="cantidades" placeholder="Ingrese la porción o cantidades"
+                                class="form-control bord" id="cantidades" placeholder="Ingrese la cantidad y medida"
                                 required>
 
                             <label>Precio:<span class="text-danger" id="marca">*</span></label>
-                            <input pattern="[0-9,.]+" type="text" name="precio" class="form-control bord" id="precio"
+                            <input pattern="[0-9.]+" type="number" name="precio" class="form-control bord" id="precio"
                                 placeholder="Ingrese el precio del producto" required>
 
                             <label>Existencia:<span class="text-danger" id="marca">*</span></label>
-                            <input pattern="[0-9]+" type="text" name="existencia" class="form-control bord"
+                            <input pattern="[0-9]+" type="number" name="existencia" class="form-control bord"
                                 id="existencia" placeholder="Ingrese la existencia del producto" required>
                         </div>
 
